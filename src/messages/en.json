@@ -1,0 +1,289 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "certifications": "Certifications",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Kauser Ahmed Methel",
+    "title": "Digital Marketing Expert & Technology Consultant",
+    "description": "Passionate about leveraging technology and strategic marketing to drive business growth and innovation.",
+    "cta": "Get in Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "welcome": "Welcome to My Journey",
+    "intro": "I'm a passionate technology and marketing professional with a track record of driving business growth through innovative solutions.",
+    "journeyTitle": "My Professional Journey",
+    "journeyContent": "With over a decade of experience in the tech industry, I've had the privilege of working with diverse organizations, from startups to established enterprises, helping them leverage technology for business growth.",
+    "sectionTitle": "My Journey",
+    "sectionSubtitle": "From Bangladesh to Australia, my passion for technology and innovation has shaped my path.",
+    "australiaTitle": "Relocation to Australia",
+    "australiaRole": "New Beginnings",
+    "australiaContent": "Relocated to Australia in search of better opportunities in technology and business innovation.",
+    "clickbitTitle": "Clickbit",
+    "clickbitRole": "Founder",
+    "clickbitContent": "Launched a creative content and digital marketing agency focused on storytelling and brand strategy for modern businesses.",
+    "trionixTitle": "Leadership at Trionix IT",
+    "trionixRole": "Chief Executive Officer",
+    "trionixContent": "As the CEO of Trionix IT, I lead a team of talented professionals in delivering cutting-edge IT solutions and digital marketing services to businesses across Australia.",
+    "educationTitle": "Education and Learning",
+    "educationRole": "Education Consultant",
+    "educationContent": "I hold a Master's degree in Information Technology and am committed to continuous learning and professional development in the ever-evolving tech landscape.",
+    "passionTitle": "My Passion for Technology",
+    "passionContent": "I'm deeply passionate about leveraging technology to solve complex business challenges and create meaningful impact in the digital space.",
+    "personalTitle": "Personal Philosophy",
+    "personalContent": "I believe in the power of innovation, collaboration, and continuous improvement to drive success in both business and life.",
+    "ctaTitle": "Let's Work Together",
+    "ctaContent": "Interested in collaborating or learning more about my work? I'd love to hear from you.",
+    "getInTouch": "Get in Touch",
+    "achievements": {
+      "title": "Key Achievements",
+      "subtitle": "Highlights from my professional journey",
+      "categories": {
+        "technical": {
+          "title": "Technical Milestones",
+          "items": [
+            "Led the development of enterprise-grade software solutions",
+            "Implemented scalable cloud infrastructure for multiple clients",
+            "Established cybersecurity best practices across organizations"
+          ]
+        },
+        "business": {
+          "title": "Business Growth",
+          "items": [
+            "Scaled Trionix IT from startup to established market player",
+            "Expanded client base by 200% in two years",
+            "Established strategic partnerships with industry leaders"
+          ]
+        },
+        "innovation": {
+          "title": "Innovation",
+          "items": [
+            "Pioneered new digital marketing strategies",
+            "Developed proprietary technology solutions",
+            "Mentored and trained next-generation tech professionals"
+          ]
+        }
+      }
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My journey in IT support, consulting, and entrepreneurship",
+    "skills_title": "Core Technical Skills",
+    "skills_subtitle": "Expertise areas that drive my professional success and deliver exceptional results",
+    "cta_title": "Ready to Collaborate?",
+    "cta_subtitle": "Let's discuss how my experience and expertise can help bring your vision to life.",
+    "cta_contact": "Get in Touch",
+    "cta_certifications": "View Certifications"
+  },
+  "certifications": {
+    "title": "Certifications & Achievements",
+    "subtitle": "Professional certifications and continuous learning achievements",
+    "search_placeholder": "Search certifications...",
+    "clear": "Clear",
+    "filter_by_category": "Filter by category:",
+    "no_certifications": "No certifications available.",
+    "no_certifications_search": "No certifications found matching your criteria.",
+    "show_all": "Show All Certifications",
+    "cta_title": "Interested in Working Together?",
+    "cta_subtitle": "With these certifications and continuous learning, I'm ready to help you with your next project.",
+    "cta_button": "Get in Touch",
+    "hero_cta_title": "Ready to Collaborate?",
+    "hero_cta_subtitle": "Let's discuss how my certifications and expertise can help bring your vision to life.",
+    "hero_cta_contact": "Get in Touch",
+    "hero_cta_experience": "View Experience"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's discuss opportunities, collaborations, or just chat about technology",
+    "form_title": "Send a Message",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "your@email.com",
+    "message_label": "Message",
+    "message_placeholder": "Your message...",
+    "send_button": "Send Message",
+    "connect_title": "Let's Connect",
+    "email": "dkathel@dkathel.com",
+    "linkedin": "linkedin.com/in/dkathel",
+    "github": "github.com/dkathel",
+    "services_title": "What I Offer",
+    "service_it": "IT Support & Consulting",
+    "service_web": "Web Development",
+    "service_marketing": "Digital Marketing",
+    "service_project": "Project Management",
+    "service_strategy": "Business Strategy",
+    "cta_title": "Ready to Start a Project?",
+    "cta_subtitle": "Let's discuss how we can work together to achieve your goals and create something amazing.",
+    "cta_about": "Learn More About Me",
+    "cta_experience": "View My Experience"
+  },
+  "entrepreneur": {
+    "title": "Entrepreneurial Journey",
+    "subtitle": "From IT professional to successful entrepreneur, discover the journey of building multiple businesses and helping others achieve their entrepreneurial dreams.",
+    "journey_title": "The Journey",
+    "phases": {
+      "foundation": {
+        "phase": "Foundation",
+        "year": "2023-2024",
+        "title": "Building the Base",
+        "description": "Laid the groundwork for entrepreneurial success through strategic planning and skill development.",
+        "achievements": [
+          "Identified market opportunities in digital marketing",
+          "Developed core business competencies",
+          "Built initial professional network",
+          "Created business model canvas"
+        ]
+      },
+      "launch": {
+        "phase": "Launch",
+        "year": "2024-2025",
+        "title": "First Ventures",
+        "description": "Successfully launched and scaled multiple business initiatives with measurable results.",
+        "achievements": [
+          "Founded ClickBIT digital agency",
+          "Developed B Training LMS platform",
+          "Achieved $1M+ ARR milestone",
+          "Built team of 20+ professionals"
+        ]
+      },
+      "scale": {
+        "phase": "Scale",
+        "year": "2025-2026",
+        "title": "Growth & Expansion",
+        "description": "Focusing on scaling operations across Australia, expanding services internationally, and mentoring entrepreneurs.",
+        "achievements": [
+          "Expanding service offerings",
+          "International market entry",
+          "Mentoring 500+ entrepreneurs",
+          "Strategic partnerships development"
+        ]
+      }
+    },
+    "coaching_title": "Coaching Services",
+    "services": {
+      "strategy": {
+        "title": "Business Strategy",
+        "description": "Develop comprehensive business strategies and execution plans.",
+        "duration": "3-6 months",
+        "price": "$5,000",
+        "features": [
+          "Market analysis & positioning",
+          "Business model development",
+          "Financial planning & projections",
+          "Growth strategy roadmap"
+        ]
+      },
+      "mindset": {
+        "title": "Mindset & Leadership",
+        "description": "Transform your mindset and develop leadership skills for success.",
+        "duration": "2-4 months",
+        "price": "$3,500",
+        "features": [
+          "Success mindset development",
+          "Leadership skill building",
+          "Team management strategies",
+          "Performance optimization"
+        ]
+      },
+      "technology": {
+        "title": "Technology Implementation",
+        "description": "Leverage technology to scale your business operations.",
+        "duration": "4-8 months",
+        "price": "$7,500",
+        "features": [
+          "LMS platform development",
+          "Automation strategies",
+          "Digital transformation",
+          "Technology stack optimization"
+        ]
+      }
+    },
+    "metrics_title": "Success Metrics",
+    "metrics": {
+      "revenue": "Annual Revenue",
+      "mentored": "Entrepreneurs Mentored",
+      "team": "Team Members",
+      "success_rate": "Success Rate"
+    },
+    "cta_title": "Ready to Start Your Entrepreneurial Journey?",
+    "cta_subtitle": "Let's work together to turn your business ideas into reality with proven strategies and expert guidance.",
+    "cta_consultation": "Book Free Consultation",
+    "cta_experience": "View Experience"
+  },
+  "blog": {
+    "title": "Blog & Insights",
+    "subtitle": "Thoughts on technology, development, and industry trends",
+    "search_placeholder": "Search posts...",
+    "clear": "Clear",
+    "filter_by": "Filter by:",
+    "no_posts": "No blog posts available yet.",
+    "no_posts_search": "No blog posts found matching your criteria.",
+    "show_all": "Show All Posts",
+    "min_read": "min read",
+    "views": "views",
+    "more_tags": "more",
+    "cta_title": "Want to Read More?",
+    "cta_subtitle": "Stay updated with the latest insights on technology, development, and industry trends.",
+    "cta_button": "Get in Touch"
+  },
+  "achievements": {
+    "title": "My Main Achievements",
+    "building_brand": "Building a Brand in the IT Industry",
+    "building_brand_desc": "As CEO of Trionix IT, I lead a growing Sydney-based technology company that provides specialized IT and digital marketing solutions for small to medium businesses. Through competitive pricing and high-value services, we help businesses achieve growth and success with innovative strategies.",
+    "education_consulting": "Quality Education Consulting",
+    "education_consulting_desc": "As Head of Marketing at BS Global, I have enhanced the company's reputation in the education industry through innovative strategies and strong student relationships. My focus on student consultation and targeted campaigns has helped establish the brand as a trusted leader.",
+    "entrepreneurship_coaching": "Entrepreneurship Coaching",
+    "entrepreneurship_coaching_desc": "As a coach for new entrepreneurs, I focused on developing success mindsets and providing personalized guidance to overcome obstacles. I created a Learning Management System (LMS) that helps provide educational resources and build a supportive community."
+  },
+  "companies": {
+    "title": "Brands and Companies",
+    "description": "Throughout my career, I have had the privilege of working with various types of companies and brands. My professional journey has involved partnerships with industry leaders and innovative startups, through which I have gained invaluable experience and knowledge."
+  },
+  "header": {
+    "get_in_touch": "Get in Touch",
+    "cta": "Get in Touch"
+  },
+  "footer": {
+    "contact_details": "Contact Details",
+    "phone": "+61 480 228 744",
+    "copyright": "© 2026 Kauser Ahmed Methel. All rights reserved",
+    "get_to_know_me": "Get to Know Me",
+    "quick_links": "Quick Links",
+    "connect": "Connect",
+    "portfolio_description": "Personal portfolio website showcasing experience, certifications, and insights",
+    "experience": "Experience",
+    "certifications": "Certifications",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "homepage": {
+    "brand_collaborations": {
+      "title": "Brand Collaborations",
+      "description": "Strategic partnerships with leading organizations across diverse industries. These collaborations represent successful projects, shared expertise, and mutual growth through innovative solutions and collaborative problem-solving."
+    },
+    "career_journey": {
+      "title": "Career Journey",
+      "description": "A chronological journey through key roles and transformational achievements across IT leadership, creative entrepreneurship, and educational innovation."
+    },
+    "ready_to_collaborate": {
+      "title": "Ready to Collaborate?",
+      "description": "Let's discuss how we can work together to achieve your business objectives and create innovative solutions.",
+      "get_in_touch": "Get in Touch",
+      "learn_more": "Learn More"
+    },
+    "stats": {
+      "years_experience": "Years Experience",
+      "transformations": "Transformations",
+      "core_specialties": "Core Specialties",
+      "success_rate": "Success Rate"
+    }
+  }
+}

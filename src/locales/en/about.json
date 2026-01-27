@@ -1,0 +1,47 @@
+{
+  "title": "About Me",
+  "welcome": "Welcome!",
+  "intro": "I'm Kawser Ahmed Methel, an entrepreneur and education advocate based in Sydney, Australia. I'm the CEO of Trionix IT, a full-service web development and digital marketing company, and Masters in Education, a registered training organization providing high-quality educational and training services. Additionally, I manage Nurture Life Care, an organization dedicated to providing support under the NDIS framework.",
+  "journeyTitle": "My Journey",
+  "journeyContent": "After moving from Bangladesh to Australia, I pursued my passion for technology, business, and education. With deep knowledge of the IT industry and education sector, I've dedicated my career to creating solutions that drive growth, innovation, and opportunity for businesses and individuals alike.",
+  "trionixTitle": "Trionix IT",
+  "trionixContent": "I founded Trionix IT to help small and medium-sized businesses navigate the digital landscape successfully. At Trionix, we specialize in custom web development, e-commerce solutions, and digital marketing strategies including SEO, PPC, and social media marketing. Our goal is to help businesses build a strong online presence and reach their full potential through customized technical solutions.",
+  "educationTitle": "Contributions to Education",
+  "educationContent": "In the field of education, Masters in Education was born from my commitment to shaping the future of learning and training. We are registered with the Australian Skills Quality Authority (ASQA) and provide a wide range of services to help students and professionals develop their skills. As a Qualified Education Agent Counsellor (QEAC), I assist international students in navigating the Australian education system, providing expert guidance on visa options and academic opportunities.",
+  "passionTitle": "What Drives Me",
+  "passionContent": "I'm passionate about making a difference—whether it's helping businesses grow through effective digital strategies or assisting students in their academic journeys. I believe in the power of technology and education to transform lives, and I'm proud to be able to contribute meaningfully in both areas.",
+  "personalTitle": "Personal Interests",
+  "personalContent": "Outside of managing my businesses, I enjoy playing football and cricket, listening to music, and working on personal development. My love for sports and the arts helps me maintain balance and brings creativity and teamwork into everything I do.",
+  "ctaTitle": "Let's Connect",
+  "ctaContent": "Whether you're a business looking for innovative IT solutions, a student seeking guidance for your educational path, or someone interested in collaboration, I'd love to connect. Feel free to reach out and let's explore how we can work together to achieve your goals.",
+  "achievements": {
+    "title": "Achievements & Impact",
+    "subtitle": "Delivering measurable results and driving innovation in every project",
+    "categories": {
+      "technical": {
+        "title": "Technical Excellence",
+        "items": [
+          { "metric": "99.9%", "description": "System Uptime" },
+          { "metric": "5+", "description": "Years Security Breach-Free" },
+          { "metric": "$2M+", "description": "Cost Savings" }
+        ]
+      },
+      "business": {
+        "title": "Business Impact",
+        "items": [
+          { "metric": "400%", "description": "Average ROI for Clients" },
+          { "metric": "50+", "description": "Business Transformations" },
+          { "metric": "500+", "description": "Leaders Coached" }
+        ]
+      },
+      "innovation": {
+        "title": "Innovation",
+        "items": [
+          { "metric": "2", "description": "Successful Startups" },
+          { "metric": "20+", "description": "Team Members Led" },
+          { "metric": "10+", "description": "Proprietary Solutions" }
+        ]
+      }
+    }
+  }
+}

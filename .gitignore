@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large files - PDFs, images, fonts
+*.pdf
+*.PDF
+public/pdf certs/
+public/certificates/
+public/images/
+src/fonts/*.ttf
