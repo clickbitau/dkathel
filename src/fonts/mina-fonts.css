@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Mina';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mina/v13/-nFzOGc18vARrz8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mina';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mina/v13/-nF8OGc18vARl4NMyiU.ttf) format('truetype');
+}

@@ -1,0 +1,67 @@
+{
+  "version": 1.1,
+  "properties": [
+    {
+      "name": "line-clamp",
+      "description": "CSS line-clamp property for text truncation",
+      "references": [
+        {
+          "name": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp"
+        }
+      ]
+    },
+    {
+      "name": "-webkit-line-clamp",
+      "description": "WebKit line-clamp property for text truncation",
+      "references": [
+        {
+          "name": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp"
+        }
+      ]
+    },
+    {
+      "name": "-webkit-box-orient",
+      "description": "WebKit box orientation property",
+      "references": [
+        {
+          "name": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-box-orient"
+        }
+      ]
+    }
+  ],
+  "atDirectives": [
+    {
+      "name": "@tailwind",
+      "description": "Tailwind CSS directive",
+      "references": [
+        {
+          "name": "Tailwind CSS Documentation",
+          "url": "https://tailwindcss.com/docs"
+        }
+      ]
+    },
+    {
+      "name": "@apply",
+      "description": "Tailwind CSS apply directive",
+      "references": [
+        {
+          "name": "Tailwind CSS Documentation",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#apply"
+        }
+      ]
+    },
+    {
+      "name": "@layer",
+      "description": "CSS layer directive",
+      "references": [
+        {
+          "name": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@layer"
+        }
+      ]
+    }
+  ]
+}
