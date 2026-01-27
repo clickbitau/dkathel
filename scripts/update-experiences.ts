@@ -17,12 +17,12 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 const experiences = [
     {
         title: 'Founder & Chief Technology Officer',
-        company: 'ClickBit Technology Solutions',
+        company: 'ClickBIT',
         location: 'Sydney, NSW, Australia',
         start_date: '2020-01-01',
         end_date: null,
         current: true,
-        description: 'Founded and developed comprehensive technology consultancy serving diverse client portfolio across SME and enterprise sectors. Architect enterprise-grade infrastructure utilizing Proxmox virtualization, Docker containerization, and ZFS storage systems.',
+        description: 'Created a technology consultancy serving a broad client base across SMEs and large enterprises, delivering robust infrastructure solutions through efficient virtualization, containerized environments, and resilient storage systems.',
         responsibilities: [
             'Architect and maintain enterprise server infrastructure using Proxmox virtualization, supporting 50+ client systems',
             'Lead full-stack development creating custom CRM systems, e-commerce platforms, and web applications using React, Node.js, PHP',

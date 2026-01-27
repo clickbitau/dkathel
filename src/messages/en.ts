@@ -69,7 +69,7 @@ export default {
             "Established strategic partnerships with industry leaders"
           ],
           "item_descriptions": [
-            "Founded ClickBit creative content and digital marketing agency",
+            "Founded ClickBit, a creative content and digital marketing agency helping brands grow through strategic content and digital campaigns.",
             "Started IT consulting career at Avrior Consulting",
             "Core technical skills in Active Directory, ticketing systems, and more"
           ]
@@ -129,7 +129,7 @@ export default {
   "homepage": {
     "brand_collaborations": {
       "title": "Brand Collaborations",
-      "description": "Strategic partnerships with leading organizations across diverse industries. These collaborations represent successful projects, shared expertise, and mutual growth through innovative solutions and collaborative problem-solving."
+      "description": "Worked closely with leading organizations across diverse industries, turning ideas into successful projects through collaboration, trust, and practical problem-solving."
     },
     "career_journey": {
       "title": "Career Journey",

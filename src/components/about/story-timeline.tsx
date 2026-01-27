@@ -22,8 +22,8 @@ interface Experience {
 
 // Icon and color mapping for each company
 const companyStyles: Record<string, { icon: typeof Briefcase; color: string }> = {
-  'ClickBit Technology Solutions': { icon: Rocket, color: 'from-yellow-500 to-orange-400' },
-  'Click Bit': { icon: Rocket, color: 'from-yellow-500 to-orange-400' },
+  'ClickBIT': { icon: Rocket, color: 'from-yellow-500 to-orange-400' },
+
   'Trionix IT': { icon: Lightbulb, color: 'from-green-500 to-emerald-400' },
   'Avrior Consulting': { icon: Settings, color: 'from-blue-500 to-cyan-400' },
 };

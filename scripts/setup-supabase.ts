@@ -462,7 +462,7 @@ async function seedExperiences() {
     const experiences = [
         {
             title: 'Founder & CEO',
-            company: 'ClickBit Technology Solutions',
+            company: 'ClickBIT',
             location: 'Sydney, NSW, Australia',
             start_date: '2020-01-01',
             current: true,
