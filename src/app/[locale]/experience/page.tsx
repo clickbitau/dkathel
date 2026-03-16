@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { experienceTranslationsBn } from '@/data/experience-translations-bn';
 
 // Helper function to convert English numerals to Bengali
 const toBengaliNumeral = (str: string): string => {
@@ -106,10 +107,10 @@ export default function ExperiencePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'Montserrat Alternates', system-ui, sans-serif" }}>
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
               {t('title')}
             </h1>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "'Mina', sans-serif" }}>
+            <p className={`text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
               {t('subtitle')}
             </p>
           </motion.div>
@@ -153,13 +154,13 @@ export default function ExperiencePage() {
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                       <div className="flex-1">
                         <h2 className={`text-2xl font-bold text-gray-900 dark:text-white mb-2 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
-                          {experience.title}
+                          {locale === 'bn' ? (experienceTranslationsBn[experience.id]?.title_bn ?? experience.title) : experience.title}
                         </h2>
                         <p className={`text-lg text-teal-600 dark:text-teal-400 font-semibold mb-2 ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
-                          {experience.company}
+                          {locale === 'bn' ? (experienceTranslationsBn[experience.id]?.company_bn ?? experience.company) : experience.company}
                         </p>
                         <p className={`text-gray-600 dark:text-gray-400 mb-2 ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
-                          📍 {experience.location}
+                          📍 {locale === 'bn' ? (experienceTranslationsBn[experience.id]?.location_bn ?? experience.location) : experience.location}
                         </p>
                         <p className={`text-sm text-gray-500 dark:text-gray-400 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-slate-700 dark:to-slate-600 px-4 py-2 rounded-full inline-block ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
                           📅 {formatDate(experience.startDate)} - {experience.current ? labels.present : formatDate(experience.endDate!)}
@@ -169,7 +170,7 @@ export default function ExperiencePage() {
 
                     <div className="space-y-6">
                       <p className={`text-gray-700 dark:text-gray-300 leading-relaxed text-lg ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
-                        {experience.description}
+                        {locale === 'bn' ? (experienceTranslationsBn[experience.id]?.description_bn ?? experience.description) : experience.description}
                       </p>
 
                       {experience.achievements && experience.achievements.length > 0 && (
@@ -178,7 +179,10 @@ export default function ExperiencePage() {
                             {labels.keyAchievements}
                           </h3>
                           <ul className="space-y-3">
-                            {experience.achievements.map((achievement, idx) => (
+                            {(locale === 'bn'
+                              ? (experienceTranslationsBn[experience.id]?.achievements_bn ?? experience.achievements)
+                              : experience.achievements
+                            ).map((achievement, idx) => (
                               <li key={idx} className="flex items-start space-x-3">
                                 <span className="text-teal-600 dark:text-teal-400 text-lg">•</span>
                                 <span className={`text-gray-700 dark:text-gray-300 leading-relaxed ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>{achievement}</span>

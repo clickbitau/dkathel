@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useMessages } from 'next-intl';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { companyTranslationsBn } from '@/data/company-translations-bn';
 
 interface Company {
   _id: string;
@@ -161,10 +162,10 @@ export default function BrandsPage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'Montserrat Alternates', system-ui, sans-serif" }}>
+          <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
             {brands.title || 'Brand'} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-gray-300 to-teal-400">{brands.title_highlight || 'Partnerships'}</span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "'Mina', sans-serif" }}>
+          <p className={`text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
             {brands.subtitle || 'From startups to established enterprises, building lasting partnerships that drive innovation and growth.'}
           </p>
         </div>
@@ -241,11 +242,15 @@ export default function BrandsPage() {
                         )}
                       </div>
                     </div>
-                    <CardTitle className="text-xl">{company.name}</CardTitle>
-                    <CardDescription className="text-sm">{translateCategory(company.category)}</CardDescription>
+                    <CardTitle className={`text-xl ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
+                      {locale === 'bn' ? (companyTranslationsBn[company._id]?.name_bn ?? company.name) : company.name}
+                    </CardTitle>
+                    <CardDescription className={`text-sm ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>{translateCategory(company.category)}</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{company.description}</p>
+                    <p className={`text-gray-600 dark:text-gray-300 text-sm leading-relaxed ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
+                      {locale === 'bn' ? (companyTranslationsBn[company._id]?.description_bn ?? company.description) : company.description}
+                    </p>
 
                     <div className="flex items-center justify-between">
                       <Badge variant="outline" className="text-xs">

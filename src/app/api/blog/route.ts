@@ -8,14 +8,16 @@ export async function GET(request: NextRequest) {
     const limit = parseInt(searchParams.get('limit') || '10')
     const search = searchParams.get('search')
     const tag = searchParams.get('tag')
+    const locale = searchParams.get('locale') || 'en'
 
     const offset = (page - 1) * limit
 
     const client = getSupabaseClient(true)
     let query = client
       .from('blog_posts')
-      .select('id, title, slug, excerpt, featured_image, tags, published_at, created_at, views, reading_time, seo', { count: 'exact' })
+      .select('id, title, slug, excerpt, featured_image, tags, published_at, created_at, views, reading_time', { count: 'exact' })
       .eq('status', 'published')
+      .contains('tags', [`lang:${locale}`])
 
     if (search) {
       query = query.or(`title.ilike.%${search}%,excerpt.ilike.%${search}%,content.ilike.%${search}%`)

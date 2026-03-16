@@ -66,10 +66,10 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'Montserrat Alternates', system-ui, sans-serif" }}>
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
               {contact.title || 'Get in Touch'}
             </h1>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "'Mina', sans-serif" }}>
+            <p className={`text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
               {contact.subtitle || "Let's discuss opportunities, collaborations, or just chat about technology"}
             </p>
           </motion.div>
@@ -121,7 +121,7 @@ export default function ContactPage() {
                     <textarea
                       id="message"
                       rows={6}
-                      className="w-full rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20 transition-all duration-300 resize-none"
+                      className="w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4 py-3 text-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20 transition-all duration-300 resize-none placeholder:text-gray-400 dark:placeholder:text-gray-500"
                       placeholder={contact.message_placeholder || "Your message..."}
                     />
                   </div>

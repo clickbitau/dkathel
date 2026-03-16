@@ -36,7 +36,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-4 py-2.5 text-[1.2rem] leading-6 font-medium text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200 relative group ${index > 0 ? 'ml-2' : ''}`}
+                  className={`px-4 py-2.5 text-[1.2rem] leading-6 font-medium text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200 relative group ${index > 0 ? 'ml-2' : ''} ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}
                 >
                   {typeof item.name === 'object' ? item.name[locale as keyof typeof item.name] : item.name}
                   <span className="absolute left-4 right-4 -bottom-0.5 h-0.5 bg-gradient-to-r from-gray-600 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -69,7 +69,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={`/${locale}${item.href}`}
-                  className={`px-4 py-2.5 text-[1.2rem] leading-6 font-medium text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200 relative group ${index > 0 ? 'ml-2' : ''}`}
+                  className={`px-4 py-2.5 text-[1.2rem] leading-6 font-medium text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200 relative group ${index > 0 ? 'ml-2' : ''} ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}
                 >
                   {typeof item.name === 'object' ? item.name[locale as keyof typeof item.name] : item.name}
                   <span className="absolute left-4 right-4 -bottom-0.5 h-0.5 bg-gradient-to-r from-gray-600 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -81,7 +81,7 @@ export function Header() {
                 <Link href={`/${locale}/contact`}>
                   <Button
                     variant="outline"
-                    className="bg-gradient-to-r from-gray-700 to-gray-900 text-white border-0 hover:from-gray-800 hover:to-black shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap px-6 py-2.5 text-[1.1rem]"
+                    className={`bg-gradient-to-r from-gray-700 to-gray-900 text-white border-0 hover:from-gray-800 hover:to-black shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap px-6 py-2.5 text-[1.1rem] ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}
                   >
                     {locale === 'en' ? 'Contact Me' : 'যোগাযোগ করুন'}
                   </Button>
@@ -141,7 +141,7 @@ export function Header() {
                   <div key={item.href} className="flow-root">
                     <Link
                       href={item.href}
-                      className="-m-2 block p-4 text-lg font-medium text-gray-900 dark:text-gray-100"
+                      className={`-m-2 block p-4 text-lg font-medium text-gray-900 dark:text-gray-100 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}
                     >
                       {typeof item.name === 'object' ? item.name[locale as keyof typeof item.name] : item.name}
                     </Link>

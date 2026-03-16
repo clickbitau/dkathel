@@ -7,6 +7,7 @@ interface AnimatedHeroProps {
     title: string;
     subtitle?: string;
     badge?: string;
+    locale?: string;
     stats?: Array<{
         value: string | number;
         label: string;
@@ -15,7 +16,7 @@ interface AnimatedHeroProps {
     children?: React.ReactNode;
 }
 
-export default function AnimatedHero({ title, subtitle, badge, stats, children }: AnimatedHeroProps) {
+export default function AnimatedHero({ title, subtitle, badge, stats, children, locale = 'en' }: AnimatedHeroProps) {
     return (
         <section className="relative pt-24 pb-32 overflow-hidden">
             {/* Animated background */}
@@ -55,13 +56,13 @@ export default function AnimatedHero({ title, subtitle, badge, stats, children }
                     )}
 
                     {/* Title */}
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'Montserrat Alternates', system-ui, sans-serif" }}>
+                    <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
                         {title}
                     </h1>
 
                     {/* Subtitle */}
                     {subtitle && (
-                        <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-10" style={{ fontFamily: "'Mina', sans-serif" }}>
+                        <p className={`text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-10 ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
                             {subtitle}
                         </p>
                     )}

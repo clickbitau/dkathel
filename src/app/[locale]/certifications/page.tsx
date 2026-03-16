@@ -95,11 +95,11 @@ export default function CertificationsPage() {
             </motion.div>
 
             {/* Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'Montserrat Alternates', system-ui, sans-serif" }}>
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
               {messages?.certifications?.title || 'Certifications & Achievements'}
             </h1>
 
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-10" style={{ fontFamily: "'Mina', sans-serif" }}>
+            <p className={`text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-10 ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
               {messages?.certifications?.subtitle || 'Professional certifications demonstrating expertise across multiple domains'}
             </p>
 
@@ -187,10 +187,10 @@ export default function CertificationsPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" style={{ fontFamily: "'Montserrat Alternates', system-ui, sans-serif" }}>
+            <h2 className={`text-4xl sm:text-5xl font-bold text-white mb-6 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
               {messages?.certifications?.hero_cta_title || 'Ready to Collaborate?'}
             </h2>
-            <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "'Mina', sans-serif" }}>
+            <p className={`text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
               {messages?.certifications?.hero_cta_subtitle || "Let's discuss how my expertise and qualifications can help bring your vision to life."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

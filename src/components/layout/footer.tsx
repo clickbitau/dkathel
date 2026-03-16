@@ -27,9 +27,11 @@ export function Footer() {
                   className="object-contain"
                 />
               </div>
-              <span className={`text-2xl font-bold text-slate-900 dark:text-white ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>DKathel Portfolio</span>
+              <span className={`text-2xl font-bold text-slate-900 dark:text-white ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
+                {locale === 'bn' ? 'ডিকাথেল পোর্টফোলিও' : 'DKathel Portfolio'}
+              </span>
             </Link>
-            <p className="mt-4 text-slate-600 dark:text-slate-300 max-w-md">
+            <p className={`mt-4 text-slate-600 dark:text-slate-300 max-w-md ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
               {t('portfolio_description')}
             </p>
           </div>
@@ -37,22 +39,22 @@ export function Footer() {
             <h3 className={`text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>{t('quick_links')}</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href={`/${locale}/experience`} className="text-slate-600 hover:text-gray-800 dark:text-slate-300 dark:hover:text-white transition-colors">
+                <Link href={`/${locale}/experience`} className={`text-slate-600 hover:text-gray-800 dark:text-slate-300 dark:hover:text-white transition-colors ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
                   {t('experience')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/certifications`} className="text-slate-600 hover:text-gray-800 dark:text-slate-300 dark:hover:text-white transition-colors">
+                <Link href={`/${locale}/certifications`} className={`text-slate-600 hover:text-gray-800 dark:text-slate-300 dark:hover:text-white transition-colors ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
                   {t('certifications')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/blog`} className="text-slate-600 hover:text-gray-800 dark:text-slate-300 dark:hover:text-white transition-colors">
+                <Link href={`/${locale}/blog`} className={`text-slate-600 hover:text-gray-800 dark:text-slate-300 dark:hover:text-white transition-colors ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
                   {t('blog')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/contact`} className="text-slate-600 hover:text-gray-800 dark:text-slate-300 dark:hover:text-white transition-colors">
+                <Link href={`/${locale}/contact`} className={`text-slate-600 hover:text-gray-800 dark:text-slate-300 dark:hover:text-white transition-colors ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
                   {t('contact')}
                 </Link>
               </li>
@@ -100,7 +102,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-logo-secondary pt-8">
-          <p className="text-center text-slate-500 dark:text-slate-400 text-sm">
+          <p className={`text-center text-slate-500 dark:text-slate-400 text-sm ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
             {t('copyright')}
           </p>
         </div>

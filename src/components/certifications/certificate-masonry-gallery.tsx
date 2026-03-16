@@ -7,6 +7,7 @@ import { Search, Filter, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import CertificateModal from './certificate-modal';
+import { certificationTranslationsBn } from '@/data/certification-translations-bn';
 
 interface Certification {
     _id: string;
@@ -231,8 +232,8 @@ export default function CertificateMasonryGallery({ certifications, messages, lo
                                         </Badge>
 
                                         {/* Title */}
-                                        <h3 className="font-semibold text-slate-900 dark:text-white line-clamp-2 text-sm leading-snug mb-2 group-hover:text-gray-800 dark:group-hover:text-blue-400 transition-colors">
-                                            {cert.name}
+                                        <h3 className={`font-semibold text-slate-900 dark:text-white line-clamp-2 text-sm leading-snug mb-2 group-hover:text-gray-800 dark:group-hover:text-blue-400 transition-colors ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
+                                            {locale === 'bn' ? (certificationTranslationsBn[cert._id]?.name_bn ?? cert.name) : cert.name}
                                         </h3>
 
                                         {/* Skills preview */}

@@ -9,9 +9,10 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--font-anek-bangla)', 'system-ui', '-apple-system', 'sans-serif'],
+                sans: ['var(--font-mina)', 'system-ui', '-apple-system', 'sans-serif'],
                 heading: ['var(--font-montserrat-alternates)', 'system-ui', '-apple-system', 'sans-serif'],
-                mono: ['var(--font-mina)', 'ui-monospace', 'monospace'],
+                mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
+                bangla: ['var(--font-anek-bangla)', 'system-ui', 'sans-serif'],
             },
         },
     },

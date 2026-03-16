@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AnimatedIcons } from '@/components/ui/animated-icon';
+import { experienceTranslationsBn } from '@/data/experience-translations-bn';
 
 interface Experience {
   id: string;
@@ -153,25 +154,28 @@ export function ExperienceTimeline({ messages }: ExperienceTimelineProps) {
                   {/* Content Card */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
                     <Card className="p-8 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 cursor-pointer border-0 shadow-xl bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm">
+                      {/* Header */}
                       <div className="flex items-start gap-4 mb-4">
                         <div className="flex-1 min-w-0">
                           <div className="flex items-baseline gap-3 mb-2">
-                            <h3 className={`text-2xl font-bold text-primary dark:text-white flex-1 min-w-0 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>{experience.company}</h3>
+                            <h3 className={`text-2xl font-bold text-primary dark:text-white flex-1 min-w-0 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
+                              {locale === 'bn' ? (experienceTranslationsBn[experience.id]?.company_bn ?? experience.company) : experience.company}
+                            </h3>
                             <Badge className={`bg-gradient-to-r ${color} text-white border-0 flex-shrink-0 text-sm font-medium px-3 py-1 ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
                               {experience.current ? (locale === 'bn' ? 'বর্তমান' : 'Current') : (locale === 'bn' ? 'সমাপ্ত' : 'Completed')}
                             </Badge>
                           </div>
                           <p className={`text-lg font-semibold text-secondary mb-1 ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
-                            {experience.title}
+                            {locale === 'bn' ? (experienceTranslationsBn[experience.id]?.title_bn ?? experience.title) : experience.title}
                           </p>
                           <p className={`text-secondary ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
-                            {formatPeriod(experience.startDate, experience.endDate, experience.current)} • {experience.location}
+                            {formatPeriod(experience.startDate, experience.endDate, experience.current)} • {locale === 'bn' ? (experienceTranslationsBn[experience.id]?.location_bn ?? experience.location) : experience.location}
                           </p>
                         </div>
                       </div>
 
                       <p className={`text-secondary mb-4 leading-relaxed ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
-                        {experience.description}
+                        {locale === 'bn' ? (experienceTranslationsBn[experience.id]?.description_bn ?? experience.description) : experience.description}
                       </p>
 
                       {/* Technologies */}
@@ -193,7 +197,10 @@ export function ExperienceTimeline({ messages }: ExperienceTimelineProps) {
                       {/* Achievements */}
                       {experience.achievements && experience.achievements.length > 0 && (
                         <div className="space-y-2 mb-6">
-                          {experience.achievements.slice(0, 3).map((achievement: string, achievementIndex: number) => (
+                          {(locale === 'bn'
+                            ? (experienceTranslationsBn[experience.id]?.achievements_bn ?? experience.achievements)
+                            : experience.achievements
+                          ).slice(0, 3).map((achievement: string, achievementIndex: number) => (
                             <div key={achievementIndex} className="flex items-start gap-2">
                               <AnimatedIcons.CheckCircle size={12} className="text-green-500 mt-1 flex-shrink-0" />
                               <p className={`text-sm text-secondary ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>{achievement}</p>

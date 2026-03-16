@@ -285,5 +285,23 @@
       "core_specialties": "Core Specialties",
       "success_rate": "Success Rate"
     }
+  },
+  "brands": {
+    "title": "Brand",
+    "title_highlight": "Partnerships",
+    "subtitle": "From startups to established enterprises, building lasting partnerships that drive innovation and growth.",
+    "industries_title": "Industries We Serve",
+    "featured_title": "Featured",
+    "featured_highlight": "Partnerships",
+    "all_categories": "All",
+    "no_companies": "No companies available at the moment.",
+    "visit_website": "Visit Website",
+    "why_partner_title": "Why Partner With Us?",
+    "proven_results": "Proven Results",
+    "proven_results_desc": "Track record of delivering measurable outcomes and ROI",
+    "long_term": "Long-term Partnership",
+    "long_term_desc": "Building lasting relationships, not just transactions",
+    "innovation": "Innovation Focus",
+    "innovation_desc": "Cutting-edge solutions and forward-thinking strategies"
   }
 }

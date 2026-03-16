@@ -29,12 +29,14 @@ export default function BlogPage() {
   const [selectedTag, setSelectedTag] = useState('');
 
   useEffect(() => {
+    setSearch('');
+    setSelectedTag('');
     fetchPosts();
-  }, []);
+  }, [locale]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch('/api/blog');
+      const response = await fetch(`/api/blog?locale=${locale}`);
       if (!response.ok) {
         throw new Error('Failed to fetch posts');
       }
@@ -50,7 +52,8 @@ export default function BlogPage() {
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
+    if (!dateString) return '';
+    return new Date(dateString).toLocaleDateString(locale === 'bn' ? 'bn-BD' : 'en-AU', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -65,8 +68,8 @@ export default function BlogPage() {
     setSelectedTag(selectedTag === tag ? '' : tag);
   };
 
-  // Get unique tags from posts
-  const allTags = Array.from(new Set(posts.flatMap(post => post.tags || [])));
+  // Get unique tags from posts — hide internal lang: routing tags
+  const allTags = Array.from(new Set(posts.flatMap(post => post.tags || []))).filter(t => !t.startsWith('lang:'));
 
   // Filter posts based on search and tags
   const filteredPosts = posts.filter(post => {
@@ -143,11 +146,11 @@ export default function BlogPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'Montserrat Alternates', system-ui, sans-serif" }}>
-              {messages?.blog?.title || 'Blog & Insights'}
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 ${locale === 'bn' ? 'font-heading-bn' : 'font-heading-en'}`}>
+              {locale === 'bn' ? 'ব্লগ এবং অন্তর্দৃষ্টি' : 'Blog & Insights'}
             </h1>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "'Mina', sans-serif" }}>
-              {messages?.blog?.subtitle || 'Thoughts on technology, development, and industry trends'}
+            <p className={`text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed ${locale === 'bn' ? 'font-body-bn' : 'font-body-en'}`}>
+              {locale === 'bn' ? 'প্রযুক্তি, বিকাশ এবং শিল্প প্রবণতা সম্পর্কে চিন্তাভাবনা' : 'Thoughts on technology, development, and industry trends'}
             </p>
           </motion.div>
         </div>
@@ -169,7 +172,7 @@ export default function BlogPage() {
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <Input
-                      placeholder={messages?.blog?.search_placeholder || "Search posts..."}
+                      placeholder={locale === 'bn' ? 'পোস্ট খুঁজুন...' : 'Search posts...'}
                       value={search}
                       onChange={(e) => handleSearch(e.target.value)}
                       className="flex-1"
@@ -181,14 +184,14 @@ export default function BlogPage() {
                         setSelectedTag('');
                       }}
                     >
-                      {messages?.blog?.clear || 'Clear'}
+                      {locale === 'bn' ? 'মুছুন' : 'Clear'}
                     </Button>
                   </div>
 
                   {/* Tags Filter */}
                   {allTags.length > 0 && (
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-sm text-gray-500 py-1 px-2">{messages?.blog?.filter_by || 'Filter by:'}</span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400 py-1 px-2">{messages?.blog?.filter_by || 'Filter by:'}</span>
                       {allTags.map((tag) => (
                         <button
                           key={tag}
@@ -218,7 +221,7 @@ export default function BlogPage() {
           >
             {filteredPosts.map((post, index) => (
               <motion.div
-                key={post._id}
+                key={post.slug}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -230,7 +233,7 @@ export default function BlogPage() {
                       <CardHeader className="p-0 mb-4">
                         <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white mb-2 font-heading">
                           <Link
-                            href={`/blog/${post.slug}`}
+                             href={`/${locale}/blog/${post.slug}`}
                             className="hover:text-gray-800 transition-colors"
                           >
                             {post.title}
@@ -278,7 +281,7 @@ export default function BlogPage() {
                           </button>
                         ))}
                         {post.tags.length > 3 && (
-                          <span className="px-2 py-1 text-gray-500 text-xs">
+                          <span className="px-2 py-1 text-gray-500 dark:text-gray-400 text-xs">
                             +{post.tags.length - 3} {messages?.blog?.more_tags || 'more'}
                           </span>
                         )}
@@ -334,16 +337,16 @@ export default function BlogPage() {
               <Card className="max-w-2xl mx-auto bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                 <CardContent className="pt-6 text-center">
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-heading">
-                    {messages?.blog?.cta_title || 'Want to Read More?'}
+                    {locale === 'bn' ? 'আরও পড়তে চান?' : 'Want to Read More?'}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    {messages?.blog?.cta_subtitle || 'Stay updated with the latest insights on technology, development, and industry trends.'}
+                   <p className="text-gray-600 dark:text-gray-400 mb-4">
+                    {locale === 'bn' ? 'প্রযুক্তি, বিকাশ এবং শিল্প প্রবণতা সম্পর্কে সর্বশেষ অন্তর্দৃষ্টি দিয়ে আপডেট থাকুন।' : 'Stay updated with the latest insights on technology, development, and industry trends.'}
                   </p>
-                  <Link href="/contact">
-                    <Button className="bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-black">
-                      {messages?.blog?.cta_button || 'Get in Touch'}
-                    </Button>
-                  </Link>
+                  <Link href={`/${locale}/contact`}>
+                     <Button className="bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-black">
+                       {locale === 'bn' ? 'যোগাযোগ করুন' : 'Get in Touch'}
+                     </Button>
+                   </Link>
                 </CardContent>
               </Card>
             </motion.div>

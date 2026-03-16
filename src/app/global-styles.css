@@ -10,13 +10,21 @@
     --font-anek-bangla: 'Anek Bangla', sans-serif;
   }
 
-  /* Base styles */
+  /* Base styles — Mina for English, Anek Bangla for Bengali via :lang(bn) */
   html {
-    font-family: var(--font-anek-bangla), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-mina), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+  }
+
+  /* Bengali locale — apply Anek Bangla to everything automatically */
+  :lang(bn),
+  :lang(bn) * {
+    font-family: var(--font-anek-bangla), system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'locl' 1, 'kern';
+    text-rendering: optimizeLegibility;
   }
 
   /* Body styles */
@@ -28,7 +36,7 @@
     -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   }
 
-  /* Typography */
+  /* Typography — English headings use Montserrat Alternates */
   h1,
   h2,
   h3,
@@ -38,6 +46,17 @@
     font-family: var(--font-montserrat-alternates), system-ui, -apple-system, sans-serif;
     font-weight: 700;
     line-height: 1.2;
+  }
+
+  /* Bengali headings stay Anek Bangla (from :lang(bn) rule above) */
+  :lang(bn) h1,
+  :lang(bn) h2,
+  :lang(bn) h3,
+  :lang(bn) h4,
+  :lang(bn) h5,
+  :lang(bn) h6 {
+    font-family: var(--font-anek-bangla), system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
   }
 
   h1 {
@@ -124,5 +143,29 @@
 
   .font-mono {
     font-family: var(--font-mina), ui-monospace, monospace;
+  }
+
+  /* Locale-aware heading font classes */
+  .font-heading-en {
+    font-family: var(--font-montserrat-alternates), system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'kern', 'liga';
+  }
+
+  .font-heading-bn {
+    font-family: var(--font-anek-bangla), system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'locl' 1, 'kern';
+    line-height: 1.5; /* Bengali script needs more line height */
+  }
+
+  /* Locale-aware body font classes */
+  .font-body-en {
+    font-family: var(--font-mina), system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'kern', 'liga';
+  }
+
+  .font-body-bn {
+    font-family: var(--font-anek-bangla), system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'locl' 1, 'kern';
+    line-height: 1.7; /* Bengali script needs more line height */
   }
 }
